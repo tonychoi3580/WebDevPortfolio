@@ -9,7 +9,7 @@ This repository holds all of your submitted work for CompSci 290 Spring 2021
 
 Start Date: Feb 2nd, 2021
 
-Finish Date: Feb 3rd, 2021
+Finish Date: N/A
 
 Hours Spent: ~10 hours
 
