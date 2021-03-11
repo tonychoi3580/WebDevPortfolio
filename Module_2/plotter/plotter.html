@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- always put your name in your work -->
+    <meta name="author" content="Tony Choi">
+    <!-- always label your name with a title -->
+    <title>CompSci 290, Spring 2021 : My Portfolio</title>
+    <!-- scale page to fit entire screen, so it properly fills non-desktop devices -->    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- DEV-only for easier refreshing: stop the web browser from ever caching this page or its images -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+</head>
+<body>
+    <header>
+    <div class = "container">
+    <h1>
+      Tony Choi
+    </h1>
+    <nav>
+    <ul>
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../hobbies.html">Hobbies</a></li>
+      <li><a href="../../filters.html">Filters</a></li>
+      <li><a href="../index.html">Module 2</a></li>
+    </ul>
+    </nav> 
+    </div>
+    </header>
+    <h2 >Land/Water/Total Area of Countries in the World!</h2>
+    
+    <div id="mapid"></div>
+    <!-- Area used to arrange buttons for user operation -->
+    <p></p>
+    <span>Resource Type: </span>
+    <form>
+        <input type="radio" name="areatype" value="water" checked="checked" onclick="fetchJSON()">
+        <label for="water">Water Area (in sq km)</label><br>
+        <input type="radio" name="areatype" value="land" onclick="fetchJSON()">
+        <label for="land">Land Area (in sq km)</label><br>
+        <input type="radio" name="areatype" value="totalarea" onclick="fetchJSON()">
+        <label for="total area">Total Area (in sq km)</label>
+    </form>
+    <p>
+      Click an option to see the area data of a country! You can choose the options of the area of water in a country, 
+      the area of land in a country, and the total area of a country. The total area option also has ranking values
+      based on the total area!
+    </p>
+
+    <footer>
+      <p class="left">
+              Powered by <a href="https://leafletjs.com/">Leaflet</a> and <a href="http://open-notify.org/">Open Notify API</a>
+              <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+      </p>
+      <p >bc204@duke.edu</p>
+    </footer>
+    <script src = "plotter.js">
+
+    </script>
+</body>
+</html>

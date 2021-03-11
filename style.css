@@ -1,0 +1,144 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: cornsilk;
+}
+
+header{
+    background-color: cornsilk;
+    padding: 0px;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
+    float: right;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav li {
+    display: inline-block;
+    margin: 50px;
+    font-size: x-large;
+    position: relative;
+}
+
+nav a {
+    color:gray;
+    text-decoration: none;
+    text-transform: uppercase;
+
+
+}
+
+nav a:hover{
+    color: black;
+}
+
+nav a::after{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: gray;
+
+    position: absolute;
+    width: 0%;
+    transition: all ease-in-out 200ms;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+.pfp{
+    margin: 15px;
+    margin-left: 200px;
+    float: left;
+    width: 10%;
+    height: auto;
+    position: relative;
+}
+
+body {
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: lightgray;
+    font-family: Helvetica, sans-serif;
+}
+
+/*https://world.openfoodfacts.org/product/0648436100682/kokomen-paldo*/
+
+img {
+    width: 20%;
+    height: auto;
+    padding: 10px;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: xx-large;
+    float: left;
+    margin-top: 60px;
+
+    position: absolute;
+
+}
+
+
+.topic {
+    background-color: rgb(139, 248, 148);
+    margin: 0px;
+    padding: 20px;
+    align-content: center;
+}
+
+h2 {
+    background-color:rgb(204, 189, 197);
+    color: rgb(3, 3, 3);
+    text-align: center;
+    margin: 10px;
+}
+
+hr {
+    padding: 3px;
+    background-color: gray;
+    
+    width: 100%;
+}
+
+h3.topic1 {
+    text-align: center;
+    /*background-color:rgb(139, 248, 148);*/
+    padding: 10px;
+    margin: 10px;
+}
+
+canvas{
+    margin-top: 130px;
+}
+
+input{
+    ruby-align: center;
+}
+
+footer{
+    background-color: cornsilk;
+    padding: 20px;
+    text-align: center;
+}
+
+#mapid { height: 500px; }
+
+.my-leaflet-map-container img {
+    max-height: none;
+}

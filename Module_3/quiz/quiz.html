@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- always put your name in your work -->
+    <meta name="author" content="Tony Choi">
+    <!-- always label your name with a title -->
+    <title>CompSci 290, Spring 2021 : My Portfolio</title>
+    <!-- scale page to fit entire screen, so it properly fills non-desktop devices -->    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- DEV-only for easier refreshing: stop the web browser from ever caching this page or its images -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="../../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+    <script defer src = "main.js"></script>
+</head>
+<body>
+<header>
+    <div class = "container">
+    <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../hobbies.html">Hobbies</a></li>
+          <li><a href="../filters.html">Filters</a></li>
+          <li><a href="../Module_2/index.html">Module 2</a></li>
+          <li><a href = "Module_3/index.html">Module 3</a></li>
+        </ul>
+    </nav>
+    <img src="../../Tony_Choi.jpg" alt="Picture of Me!" class = "pfp">
+    </div>
+
+</header>
+<div id="app">
+    <div id="container">
+
+        <template v-if="quizChosen">
+            <div id="quizTitle">
+                <h2>{{ quizTaking }}</h2>
+            </div>
+
+            <div id="result">
+                <strong>{{resultText}}</strong>
+            </div>
+
+            <div id="main-quiz">
+                <div v-for="(question, i) in quizQuestions" :class="`question${i}`" >
+                    <p>{{ question }}</p>
+                    <ul>
+                        <li v-for="(choice, j) in quizChoices[i]">
+                            <input type="radio" :name="`answer${i}`" :value="choice">
+                            <label :for="choice">{{ choice }}</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <button id="submit" @click="processAnswers()">Submit</button>
+            <button id="reset" @click="refresh()">Take a different quiz!</button>
+        </template>
+
+        <template v-else>
+            <h2>You've got some options. What quiz do you want to take?</h2>
+            
+            <div>
+                <button class="quizSelect" v-for="(link, i) in links" @click="fetchJSON(i)">
+                    {{ link.name }}
+                </button>
+            </div>
+
+        </template>
+    </div>  
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- always put your name in your work -->
+    <meta name="author" content="Tony Choi">
+    <!-- always label your name with a title -->
+    <title>CompSci 290, Spring 2021 : My Portfolio</title>
+    <!-- scale page to fit entire screen, so it properly fills non-desktop devices -->    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- DEV-only for easier refreshing: stop the web browser from ever caching this page or its images -->
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    
+    <header>
+    <div class = "container">
+    <h1>
+      Tony Choi
+    </h1>
+    <nav>
+    <ul>
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../hobbies.html">Hobbies</a></li>
+      <li><a href="../../filters.html">Filters</a></li>
+      <li><a href="../index.html">Module 2</a></li>
+    </ul>
+    </nav> 
+    </div>
+    </header>
+<h3 class = "topic1">
+    Speed Typing Game!
+</h3>
+<h5>
+    Rules:
+</h5>
+<ol>
+    <li>Choose a Difficulty Setting</li>
+    <li>Type the word seen into the input and press enter before the timer runs out!</li>
+    <li>Every word u get right gives you 10 points</li>
+    <li>Keep racking up points until you mistype a word! Then it's game over.</li>
+</ol>
+<div id = "game">
+    <h2 id = "currentWord">
+        Press Start to Play!
+    </h2>
+
+    <p> Type the given word in the box below</p>
+    <p>
+        <span id = "time_given">5</span> seconds given
+    </p>
+    <button onclick = "setupGame()">start!</button>
+    <input type="text" placeholder="Start typing here..." id="word_input" autofocus>
+
+    <button onclick = "setLevel(1)">easy</button>
+    <button onclick = "setLevel(2)">medium</button>
+    <button onclick = "setLevel(3)">hard</button>
+    <p>
+        <span id = "time_left">5</span> seconds left!!
+        Score: <span id="current_score">0</span>
+    </p>
+
+    <p>
+        <span id = "gameover">Give the game a try!</span>
+        Highscore: <span id = "highscore">0</span>
+    </p>
+</div>
+<script src = "words.js"></script>
+<script src="main.js"></script>
+    
+<footer>
+    <p>
+        Contact: baekgyu.choi@duke.edu 
+    </p>
+    <p>
+        Last Modified: Feb. 2021
+    </p>
+</footer>
+
+
+
+</body>
+</html>
